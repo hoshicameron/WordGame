@@ -5,12 +5,12 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "so_BordData" , menuName ="ScriptableObjects/BoardData" )]
-public class so_BoardData : ScriptableObject
+public class BoardData : ScriptableObject
 {
     [System.Serializable]
     public class SearchingWord
     {
-        public string word;
+        public string word ;
     }
 
     [System.Serializable]
@@ -48,6 +48,7 @@ public class so_BoardData : ScriptableObject
     public int rows = 0;
 
     public BoardRow[] board;
+    public List<SearchingWord>searchWords=new List<SearchingWord>();
 
     public void ClearWithEmptyString()
     {

@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEditor;
 using UnityEditorInternal;
 
-[CustomEditor(typeof(so_BoardData),false)]
+[CustomEditor(typeof(BoardData),false)]
 [CanEditMultipleObjects]
 [System.Serializable]
 public class BoardDataDrawer : Editor
 {
-    private so_BoardData GameDataInstance=>target as so_BoardData;
+    private BoardData GameDataInstance=>target as BoardData;
     private ReorderableList _dataList;
 
     private void OnEnable()
     {
-
+        InitializeReordableList(ref _dataList,"searchWords","Searching Words");
     }
 
     public override void OnInspectorGUI()
@@ -23,8 +24,18 @@ public class BoardDataDrawer : Editor
         DrawColumnsRowsInputFields();
         EditorGUILayout.Space();
 
+        ConvertToUpperButton();
+
         if(GameDataInstance.board!=null && GameDataInstance.columns >0 && GameDataInstance.rows>0)
             DrawBoardTable();
+
+        EditorGUILayout.BeginHorizontal();
+        ClearBoardButton();
+        FillUpWithRandomLettersButton();
+        EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.Space();
+        _dataList.DoLayoutList();
 
         serializedObject.ApplyModifiedProperties();
         if (GUI.changed)
@@ -106,5 +117,85 @@ public class BoardDataDrawer : Editor
         }
 
         EditorGUILayout.EndHorizontal();
+    }
+
+    private void InitializeReordableList(ref ReorderableList list, string propertyName, string listLable)
+    {
+        list = new ReorderableList(serializedObject, serializedObject.FindProperty(propertyName),
+            true, true, true,true);
+
+        list.drawHeaderCallback = rect => { EditorGUI.LabelField(rect, listLable); };
+
+        var l = list;
+
+        list.drawElementCallback = (rect, index, active, focused) =>
+        {
+            var element = l.serializedProperty.GetArrayElementAtIndex(index);
+            rect.y += 2;
+
+            EditorGUI.PropertyField(
+                new Rect(rect.x, rect.y, EditorGUIUtility.labelWidth, EditorGUIUtility.singleLineHeight),
+                element.FindPropertyRelative("word"), GUIContent.none);
+        };
+
+    }
+
+
+    private void ConvertToUpperButton()
+    {
+        if (GUILayout.Button("To Upper"))
+        {
+            for (int i = 0; i < GameDataInstance.columns; i++)
+            {
+                for (int j = 0; j < GameDataInstance.rows; j++)
+                {
+                    var errorCounter = Regex.Matches(GameDataInstance.board[i].row[j], @"[a-z]").Count;
+
+                    if (errorCounter > 0)
+                        GameDataInstance.board[i].row[j] = GameDataInstance.board[i].row[j].ToUpper();
+                }
+            }
+
+            foreach (var searchingWord in GameDataInstance.searchWords)
+            {
+                var errorCounter = Regex.Matches(searchingWord.word, @"[a-z]").Count;
+
+                if (errorCounter > 0)
+                    searchingWord.word = searchingWord.word.ToUpper();
+            }
+        }
+    }
+
+    private void ClearBoardButton()
+    {
+        if (GUILayout.Button("Clear Board"))
+        {
+            for (int i = 0; i < GameDataInstance.columns; i++)
+            {
+                for (int j = 0; j < GameDataInstance.rows; j++)
+                {
+                    GameDataInstance.board[i].row[j] = string.Empty;
+                }
+            }
+        }
+    }
+
+    private void FillUpWithRandomLettersButton()
+    {
+        if (GUILayout.Button("Fill With Random Letters"))
+        {
+            for (int i = 0; i < GameDataInstance.columns; i++)
+            {
+                for (int j = 0; j < GameDataInstance.rows; j++)
+                {
+                    var errorCounter = Regex.Matches(GameDataInstance.board[i].row[j], @"[a-zA-Z ]").Count;
+                    string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                    int index = Random.Range(0, letters.Length);
+
+                    if (errorCounter == 0)
+                        GameDataInstance.board[i].row[j] = letters[index].ToString();
+                }
+            }
+        }
     }
 }
