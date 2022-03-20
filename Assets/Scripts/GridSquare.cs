@@ -12,6 +12,84 @@ public class GridSquare : MonoBehaviour
 
     private SpriteRenderer displayedImage;
 
+    private bool selected = false;
+    private bool clicked = false;
+
+    private int index = -1;
+
+    public void SetIndex(int index)
+    {
+        this.index = index;
+    }
+
+    public int GetIndex()
+    {
+        return index;
+    }
+
+
+    private void OnEnable()
+    {
+        GameEvents.EnableSquareSelectionEvent+=OnEnableSquareSelectionEvent;
+        GameEvents.DisableSquareSelectionEvent+=OnDisableSquareSelectionEvent;
+        GameEvents.SelectSquareEvent+=OnSelectSquareEvent;
+
+    }
+
+    private void OnDisable()
+    {
+        GameEvents.EnableSquareSelectionEvent-=OnEnableSquareSelectionEvent;
+        GameEvents.DisableSquareSelectionEvent-=OnDisableSquareSelectionEvent;
+        GameEvents.SelectSquareEvent-=OnSelectSquareEvent;
+
+    }
+
+    private void OnSelectSquareEvent(Vector3 position)
+    {
+        if (transform.position == position)
+            displayedImage.sprite = selectedLetterData.image;
+    }
+
+    private void OnDisableSquareSelectionEvent()
+    {
+        selected = false;
+        clicked = false;
+    }
+
+    private void OnEnableSquareSelectionEvent()
+    {
+        clicked = true;
+        selected = false;
+    }
+
+    private void OnMouseDown()
+    {
+        OnEnableSquareSelectionEvent();
+        GameEvents.CallEnableSquareSelectionEvent();
+        ChecksSquare();
+        displayedImage.sprite = selectedLetterData.image;
+    }
+
+    private void OnMouseEnter()
+    {
+        ChecksSquare();
+    }
+
+    private void OnMouseUp()
+    {
+        GameEvents.CallClearSelectionEvent();
+        GameEvents.CallDisableSquareSelectionEvent();
+    }
+
+    public void ChecksSquare()
+    {
+        if (!selected && clicked)
+        {
+            selected = true;
+            GameEvents.CallCheckSquareEvent(normalLetterData.letter,transform.position,index);
+        }
+    }
+
     private void Start()
     {
         displayedImage = GetComponent<SpriteRenderer>();

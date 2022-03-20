@@ -10,6 +10,7 @@
             <e p="AlphabetDataDrawer.cs" t="Include" />
             <e p="BoardDataDrawer.cs" t="Include" />
           </e>
+          <e p="GameEvents.cs" t="Include" />
           <e p="GameUtility.cs" t="Include" />
           <e p="GridSquare.cs" t="Include" />
           <e p="ScriptableObjects" t="Include">

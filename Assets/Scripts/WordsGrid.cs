@@ -29,8 +29,8 @@ public class WordsGrid : MonoBehaviour
                 foreach (var squareLetter in squares.row)
                 {
                     var normalLetterData = alphabetData.alphabetNormal.Find(data => data.letter == squareLetter);
-                    var selectedLetterData = alphabetData.alphabetHighlighted.Find(data => data.letter == squareLetter);
-                    var correctLetterData = alphabetData.alphabetWrong.Find(data => data.letter == squareLetter);
+                    var selectedLetterData = alphabetData.alphabetWrong.Find(data => data.letter == squareLetter);
+                    var correctLetterData = alphabetData.alphabetHighlighted.Find(data => data.letter == squareLetter);
 
                     if (normalLetterData.image == null || selectedLetterData.image == null)
                     {
