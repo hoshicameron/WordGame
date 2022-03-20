@@ -13,128 +13,43 @@ MonoBehaviour:
   m_Name: so_Puzzle1
   m_EditorClassIdentifier: 
   timeInSeconds: 0
-  columns: 10
-  rows: 10
+  columns: 5
+  rows: 5
   board:
-  - _size: 10
+  - _size: 5
     row:
-    - O
-    - P
-    - P
-    - I
-    - X
-    - N
-    - X
-    - W
-    - M
-    - I
-  - _size: 10
-    row:
-    - S
-    - u
-    - m
-    - m
-    - e
-    - r
-    - H
-    - Z
-    - W
-    - L
-  - _size: 10
-    row:
-    - H
-    - J
-    - E
-    - E
-    - F
-    - H
-    - O
-    - H
-    - N
-    - O
-  - _size: 10
-    row:
+    - R
+    - U
     - A
-    - E
-    - E
-    - U
-    - V
-    - S
-    - U
-    - R
     - Y
-    - P
-  - _size: 10
-    row:
-    - B
-    - K
-    - K
-    - Z
-    - Q
-    - L
-    - M
-    - P
-    - R
-    - F
-  - _size: 10
-    row:
-    - O
-    - O
-    - W
-    - U
     - D
-    - R
-    - Z
-    - O
-    - E
-    - Y
-  - _size: 10
+  - _size: 5
     row:
-    - B
-    - G
-    - Z
-    - Y
     - H
-    - N
-    - J
-    - U
-    - R
-    - Q
-  - _size: 10
-    row:
-    - S
-    - L
-    - B
-    - C
-    - A
-    - U
-    - E
-    - N
-    - R
-    - J
-  - _size: 10
-    row:
-    - O
-    - J
-    - V
-    - N
-    - V
     - X
+    - J
+    - A
+    - M
+  - _size: 5
+    row:
     - R
     - K
+    - B
     - F
     - N
-  - _size: 10
+  - _size: 5
     row:
-    - T
+    - Z
+    - G
     - K
-    - P
-    - Y
-    - Z
+    - L
+    - O
+  - _size: 5
+    row:
     - N
-    - U
-    - S
-    - Z
-    - B
+    - N
+    - N
+    - C
+    - M
   searchWords:
   - word: SUMMER
