@@ -45,6 +45,6 @@ public static class GameEvents
 
     public static void CallClearSelectionEvent()
     {
-        DisableSquareSelectionEvent?.Invoke();
+        ClearSelectionEvent?.Invoke();
     }
 }

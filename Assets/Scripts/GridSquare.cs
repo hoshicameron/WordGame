@@ -14,6 +14,7 @@ public class GridSquare : MonoBehaviour
 
     private bool selected = false;
     private bool clicked = false;
+    private bool correct = false;
 
     private int index = -1;
 
@@ -54,6 +55,10 @@ public class GridSquare : MonoBehaviour
     {
         selected = false;
         clicked = false;
+
+        // if player found correct word then change the  square sprite to correct image
+        // otherwise make it normal
+        displayedImage.sprite = correct ? correctLetterData.image : normalLetterData.image;
     }
 
     private void OnEnableSquareSelectionEvent()
@@ -77,12 +82,20 @@ public class GridSquare : MonoBehaviour
 
     private void OnMouseUp()
     {
+        // Clear all selected squares
         GameEvents.CallClearSelectionEvent();
+
+        // Trigger DisableSquareSelectionEvent on all selected squares
         GameEvents.CallDisableSquareSelectionEvent();
+
+
     }
 
     public void ChecksSquare()
     {
+        // If mouse over the current square and clicked then add
+        // letter to word string in WordChecker class
+
         if (!selected && clicked)
         {
             selected = true;

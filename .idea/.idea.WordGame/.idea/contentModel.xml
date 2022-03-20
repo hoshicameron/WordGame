@@ -18,6 +18,9 @@
             <e p="BoardData.cs" t="Include" />
             <e p="GameData.cs" t="Include" />
           </e>
+          <e p="SearchingWord.cs" t="Include" />
+          <e p="SearchingWordsList.cs" t="Include" />
+          <e p="WordChecker.cs" t="Include" />
           <e p="WordsGrid.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
