@@ -47,4 +47,13 @@ public static class GameEvents
     {
         ClearSelectionEvent?.Invoke();
     }
+
+    //************************************************************
+
+    public static event Action<string, List<int>> CorrectWordEvent;
+
+    public static void CallCorrectWordEvent(string word, List<int> squareIndexes)
+    {
+        CorrectWordEvent?.Invoke(word,squareIndexes);
+    }
 }

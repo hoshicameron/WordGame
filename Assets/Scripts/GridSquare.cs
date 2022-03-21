@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class GridSquare : MonoBehaviour
@@ -34,6 +35,7 @@ public class GridSquare : MonoBehaviour
         GameEvents.EnableSquareSelectionEvent+=OnEnableSquareSelectionEvent;
         GameEvents.DisableSquareSelectionEvent+=OnDisableSquareSelectionEvent;
         GameEvents.SelectSquareEvent+=OnSelectSquareEvent;
+        GameEvents.CorrectWordEvent += CorrectWord;
 
     }
 
@@ -42,6 +44,7 @@ public class GridSquare : MonoBehaviour
         GameEvents.EnableSquareSelectionEvent-=OnEnableSquareSelectionEvent;
         GameEvents.DisableSquareSelectionEvent-=OnDisableSquareSelectionEvent;
         GameEvents.SelectSquareEvent-=OnSelectSquareEvent;
+        GameEvents.CorrectWordEvent -= CorrectWord;
 
     }
 
@@ -67,6 +70,17 @@ public class GridSquare : MonoBehaviour
         selected = false;
     }
 
+    private void CorrectWord(string word, List<int> squareIndexes)
+    {
+        if (selected && squareIndexes.Contains(index))
+        {
+            correct = true;
+            displayedImage.sprite = correctLetterData.image;
+        }
+
+        selected = false;
+        clicked = false;
+    }
     private void OnMouseDown()
     {
         OnEnableSquareSelectionEvent();

@@ -1,18 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SearchingWord : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   [SerializeField] private GameObject crossLine=null;
+   [SerializeField] private TextMeshProUGUI wordText = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   private string _word;
+
+   private void OnEnable()
+   {
+      GameEvents.CorrectWordEvent += CorrectWord;
+   }
+
+   private void OnDisable()
+   {
+      GameEvents.CorrectWordEvent -= CorrectWord;
+   }
+
+   private void Start()
+   {
+
+   }
+
+   public void SetWordText(string word)
+   {
+      _word = word;
+      wordText.SetText(_word);
+   }
+
+   private void CorrectWord(string word, List<int> squareIndexes)
+   {
+      if (_word == word)
+      {
+         crossLine.SetActive(true);
+      }
+   }
 }
