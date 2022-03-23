@@ -10,6 +10,7 @@
             <e p="AlphabetDataDrawer.cs" t="Include" />
             <e p="BoardDataDrawer.cs" t="Include" />
           </e>
+          <e p="GameDataSelector.cs" t="Include" />
           <e p="GameEvents.cs" t="Include" />
           <e p="GameUtility.cs" t="Include" />
           <e p="GridSquare.cs" t="Include" />
@@ -17,9 +18,11 @@
             <e p="AlphabetData.cs" t="Include" />
             <e p="BoardData.cs" t="Include" />
             <e p="GameData.cs" t="Include" />
+            <e p="GameLevelData.cs" t="Include" />
           </e>
           <e p="SearchingWord.cs" t="Include" />
           <e p="SearchingWordsList.cs" t="Include" />
+          <e p="SelectPuzzleButton.cs" t="Include" />
           <e p="WordChecker.cs" t="Include" />
           <e p="WordsGrid.cs" t="Include" />
         </e>

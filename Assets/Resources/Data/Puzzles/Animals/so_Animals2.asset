@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Animals2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 7
+  rows: 7
+  board:
+  - _size: 7
+    row:
+    - S
+    - K
+    - C
+    - F
+    - D
+    - K
+    - M
+  - _size: 7
+    row:
+    - O
+    - P
+    - A
+    - N
+    - D
+    - A
+    - U
+  - _size: 7
+    row:
+    - G
+    - P
+    - A
+    - Q
+    - L
+    - Z
+    - T
+  - _size: 7
+    row:
+    - I
+    - X
+    - G
+    - R
+    - H
+    - N
+    - W
+  - _size: 7
+    row:
+    - H
+    - W
+    - H
+    - O
+    - R
+    - S
+    - E
+  - _size: 7
+    row:
+    - N
+    - B
+    - X
+    - U
+    - L
+    - O
+    - Z
+  - _size: 7
+    row:
+    - M
+    - O
+    - U
+    - S
+    - E
+    - P
+    - W
+  searchWords:
+  - word: SPARROW
+  - word: HORSE
+  - word: PANDA
+  - word: PANDA
+  - word: MOUSE

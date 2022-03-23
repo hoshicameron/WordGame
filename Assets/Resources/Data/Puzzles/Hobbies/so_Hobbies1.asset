@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Hobbies1
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 7
+  rows: 7
+  board:
+  - _size: 7
+    row:
+    - E
+    - D
+    - K
+    - U
+    - H
+    - T
+    - J
+  - _size: 7
+    row:
+    - I
+    - A
+    - D
+    - X
+    - E
+    - K
+    - B
+  - _size: 7
+    row:
+    - V
+    - N
+    - Z
+    - L
+    - X
+    - F
+    - A
+  - _size: 7
+    row:
+    - S
+    - C
+    - H
+    - E
+    - S
+    - S
+    - R
+  - _size: 7
+    row:
+    - K
+    - E
+    - H
+    - P
+    - K
+    - L
+    - R
+  - _size: 7
+    row:
+    - E
+    - N
+    - G
+    - S
+    - I
+    - T
+    - E
+  - _size: 7
+    row:
+    - F
+    - W
+    - Y
+    - L
+    - E
+    - Z
+    - B
+  searchWords:
+  - word: CHESS
+  - word: BARRE
+  - word: DANCE
+  - word: SKIE

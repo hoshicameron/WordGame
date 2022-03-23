@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Toys2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 10
+  rows: 10
+  board:
+  - _size: 10
+    row:
+    - A
+    - B
+    - I
+    - R
+    - Y
+    - I
+    - C
+    - R
+    - F
+    - F
+  - _size: 10
+    row:
+    - Z
+    - I
+    - Y
+    - A
+    - B
+    - X
+    - S
+    - Z
+    - H
+    - T
+  - _size: 10
+    row:
+    - B
+    - P
+    - R
+    - C
+    - C
+    - E
+    - A
+    - A
+    - J
+    - S
+  - _size: 10
+    row:
+    - R
+    - Q
+    - N
+    - P
+    - Y
+    - C
+    - O
+    - X
+    - K
+    - M
+  - _size: 10
+    row:
+    - Z
+    - R
+    - Z
+    - C
+    - L
+    - C
+    - C
+    - M
+    - E
+    - U
+  - _size: 10
+    row:
+    - G
+    - Z
+    - Q
+    - A
+    - S
+    - A
+    - L
+    - C
+    - O
+    - R
+  - _size: 10
+    row:
+    - Z
+    - S
+    - U
+    - B
+    - U
+    - K
+    - N
+    - E
+    - K
+    - D
+  - _size: 10
+    row:
+    - R
+    - S
+    - D
+    - M
+    - L
+    - D
+    - A
+    - E
+    - X
+    - H
+  - _size: 10
+    row:
+    - M
+    - A
+    - R
+    - B
+    - L
+    - E
+    - S
+    - E
+    - Z
+    - J
+  - _size: 10
+    row:
+    - Y
+    - R
+    - D
+    - I
+    - R
+    - K
+    - B
+    - A
+    - V
+    - O
+  searchWords:
+  - word: AIRPLANE
+  - word: BICYCLE
+  - word: CAR
+  - word: DRUMS
+  - word: MARBLES

@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Food2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 10
+  rows: 10
+  board:
+  - _size: 10
+    row:
+    - H
+    - M
+    - B
+    - C
+    - Y
+    - T
+    - A
+    - F
+    - H
+    - X
+  - _size: 10
+    row:
+    - L
+    - A
+    - Z
+    - A
+    - N
+    - I
+    - A
+    - S
+    - U
+    - Z
+  - _size: 10
+    row:
+    - C
+    - H
+    - M
+    - K
+    - R
+    - F
+    - A
+    - I
+    - Z
+    - M
+  - _size: 10
+    row:
+    - D
+    - X
+    - D
+    - B
+    - D
+    - S
+    - T
+    - E
+    - A
+    - K
+  - _size: 10
+    row:
+    - P
+    - U
+    - O
+    - P
+    - U
+    - T
+    - M
+    - F
+    - M
+    - W
+  - _size: 10
+    row:
+    - D
+    - H
+    - X
+    - C
+    - E
+    - R
+    - C
+    - Q
+    - D
+    - R
+  - _size: 10
+    row:
+    - K
+    - A
+    - W
+    - G
+    - H
+    - U
+    - G
+    - D
+    - T
+    - I
+  - _size: 10
+    row:
+    - U
+    - U
+    - A
+    - B
+    - S
+    - D
+    - X
+    - E
+    - F
+    - E
+  - _size: 10
+    row:
+    - H
+    - P
+    - V
+    - L
+    - I
+    - O
+    - P
+    - B
+    - R
+    - Y
+  - _size: 10
+    row:
+    - S
+    - L
+    - I
+    - F
+    - F
+    - V
+    - W
+    - G
+    - J
+    - B
+  searchWords:
+  - word: HAMBURGER
+  - word: SPAGETTI
+  - word: FISH
+  - word: STEAK
+  - word: LAZANIA

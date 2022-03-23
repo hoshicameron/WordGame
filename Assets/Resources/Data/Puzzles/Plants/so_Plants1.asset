@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Plants1
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 7
+  rows: 7
+  board:
+  - _size: 7
+    row:
+    - B
+    - A
+    - E
+    - M
+    - G
+    - Y
+    - X
+  - _size: 7
+    row:
+    - C
+    - B
+    - A
+    - M
+    - B
+    - O
+    - U
+  - _size: 7
+    row:
+    - T
+    - R
+    - E
+    - V
+    - A
+    - G
+    - A
+  - _size: 7
+    row:
+    - S
+    - C
+    - A
+    - C
+    - T
+    - U
+    - S
+  - _size: 7
+    row:
+    - P
+    - H
+    - T
+    - M
+    - L
+    - E
+    - Y
+  - _size: 7
+    row:
+    - D
+    - I
+    - H
+    - C
+    - R
+    - O
+    - M
+  - _size: 7
+    row:
+    - X
+    - X
+    - B
+    - C
+    - X
+    - C
+    - L
+  searchWords:
+  - word: BAMBO
+  - word: AGAVE
+  - word: CACTUS
+  - word: ORCHID

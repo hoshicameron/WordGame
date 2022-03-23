@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Hobbies2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 11
+  rows: 11
+  board:
+  - _size: 11
+    row:
+    - D
+    - J
+    - Q
+    - S
+    - A
+    - R
+    - V
+    - B
+    - R
+    - U
+    - R
+  - _size: 11
+    row:
+    - S
+    - E
+    - G
+    - V
+    - Y
+    - R
+    - E
+    - H
+    - C
+    - R
+    - A
+  - _size: 11
+    row:
+    - W
+    - X
+    - S
+    - C
+    - Y
+    - J
+    - Y
+    - C
+    - G
+    - Q
+    - U
+  - _size: 11
+    row:
+    - H
+    - V
+    - D
+    - I
+    - X
+    - Z
+    - V
+    - H
+    - E
+    - U
+    - I
+  - _size: 11
+    row:
+    - O
+    - O
+    - R
+    - I
+    - G
+    - A
+    - M
+    - I
+    - S
+    - Q
+    - Y
+  - _size: 11
+    row:
+    - Q
+    - F
+    - C
+    - C
+    - O
+    - N
+    - U
+    - D
+    - X
+    - X
+    - R
+  - _size: 11
+    row:
+    - V
+    - O
+    - I
+    - N
+    - C
+    - Y
+    - I
+    - R
+    - M
+    - L
+    - T
+  - _size: 11
+    row:
+    - C
+    - G
+    - G
+    - C
+    - E
+    - A
+    - I
+    - N
+    - V
+    - Z
+    - E
+  - _size: 11
+    row:
+    - B
+    - K
+    - A
+    - K
+    - G
+    - R
+    - R
+    - W
+    - G
+    - I
+    - O
+  - _size: 11
+    row:
+    - Q
+    - X
+    - M
+    - Z
+    - F
+    - N
+    - A
+    - V
+    - W
+    - D
+    - P
+  - _size: 11
+    row:
+    - E
+    - S
+    - V
+    - K
+    - V
+    - X
+    - K
+    - A
+    - R
+    - R
+    - B
+  searchWords:
+  - word: ORIGAMI
+  - word: ARCHERY
+  - word: 'POETRY '
+  - word: 'DESIGNING '
+  - word: MAGIC

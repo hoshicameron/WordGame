@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Countries2
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 11
+  rows: 11
+  board:
+  - _size: 11
+    row:
+    - A
+    - R
+    - E
+    - A
+    - I
+    - R
+    - Y
+    - S
+    - C
+    - Y
+    - U
+  - _size: 11
+    row:
+    - O
+    - F
+    - T
+    - E
+    - R
+    - L
+    - K
+    - Y
+    - Y
+    - P
+    - N
+  - _size: 11
+    row:
+    - R
+    - H
+    - G
+    - W
+    - E
+    - M
+    - T
+    - S
+    - P
+    - H
+    - I
+  - _size: 11
+    row:
+    - A
+    - Q
+    - C
+    - H
+    - I
+    - N
+    - A
+    - Q
+    - P
+    - J
+    - T
+  - _size: 11
+    row:
+    - V
+    - R
+    - Z
+    - U
+    - A
+    - M
+    - B
+    - V
+    - X
+    - B
+    - E
+  - _size: 11
+    row:
+    - R
+    - T
+    - I
+    - U
+    - C
+    - N
+    - H
+    - Z
+    - P
+    - J
+    - D
+  - _size: 11
+    row:
+    - P
+    - I
+    - Q
+    - L
+    - L
+    - T
+    - I
+    - Y
+    - S
+    - N
+    - S
+  - _size: 11
+    row:
+    - N
+    - T
+    - P
+    - Y
+    - G
+    - E
+    - Z
+    - S
+    - N
+    - H
+    - T
+  - _size: 11
+    row:
+    - S
+    - H
+    - A
+    - E
+    - B
+    - P
+    - N
+    - R
+    - T
+    - P
+    - A
+  - _size: 11
+    row:
+    - K
+    - U
+    - R
+    - D
+    - I
+    - S
+    - T
+    - A
+    - N
+    - A
+    - X
+  - _size: 11
+    row:
+    - T
+    - U
+    - R
+    - K
+    - Y
+    - I
+    - E
+    - W
+    - H
+    - Z
+    - N
+  searchWords:
+  - word: AFGHANISTAN
+  - word: TURKYIE
+  - word: CHINA
+  - word: KURDISTAN
+  - word: EGYPT
+  - word: SYRIA

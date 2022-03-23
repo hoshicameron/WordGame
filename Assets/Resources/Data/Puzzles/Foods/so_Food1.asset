@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
+  m_Name: so_Food1
+  m_EditorClassIdentifier: 
+  timeInSeconds: 0
+  columns: 10
+  rows: 10
+  board:
+  - _size: 10
+    row:
+    - B
+    - R
+    - E
+    - A
+    - D
+    - M
+    - N
+    - F
+    - Q
+    - V
+  - _size: 10
+    row:
+    - L
+    - P
+    - R
+    - T
+    - X
+    - V
+    - N
+    - M
+    - T
+    - S
+  - _size: 10
+    row:
+    - C
+    - U
+    - I
+    - Y
+    - A
+    - C
+    - E
+    - N
+    - O
+    - N
+  - _size: 10
+    row:
+    - C
+    - Q
+    - S
+    - O
+    - U
+    - P
+    - X
+    - X
+    - M
+    - P
+  - _size: 10
+    row:
+    - Z
+    - E
+    - V
+    - K
+    - Z
+    - I
+    - Y
+    - E
+    - L
+    - U
+  - _size: 10
+    row:
+    - U
+    - I
+    - N
+    - Z
+    - E
+    - Z
+    - W
+    - F
+    - E
+    - Z
+  - _size: 10
+    row:
+    - P
+    - W
+    - F
+    - J
+    - E
+    - Z
+    - E
+    - M
+    - T
+    - J
+  - _size: 10
+    row:
+    - G
+    - Y
+    - K
+    - E
+    - B
+    - A
+    - B
+    - M
+    - T
+    - B
+  - _size: 10
+    row:
+    - R
+    - C
+    - N
+    - K
+    - X
+    - A
+    - X
+    - F
+    - D
+    - Z
+  - _size: 10
+    row:
+    - H
+    - B
+    - N
+    - H
+    - J
+    - K
+    - V
+    - Z
+    - J
+    - X
+  searchWords:
+  - word: BREAD
+  - word: PIZZA
+  - word: KEBAB
+  - word: OMLET
+  - word: SOUP
