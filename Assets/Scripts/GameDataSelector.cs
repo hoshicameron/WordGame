@@ -19,7 +19,7 @@ public class GameDataSelector : MonoBehaviour
         {
             if (record.categoryName == currentGameData.selectedCategoryName)
             {
-                var boardIndex = 0;
+                var boardIndex = DataSaver.ReadCategoryCurrentIndexValues(currentGameData.selectedCategoryName);
                 if (boardIndex < record.BoardDatas.Count)
                 {
                     currentGameData.selectedBoardData = record.BoardDatas[boardIndex];
