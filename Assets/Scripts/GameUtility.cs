@@ -9,4 +9,6 @@ public class GameUtility : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+
+
 }

@@ -24,6 +24,7 @@
           <e p="SearchingWord.cs" t="Include" />
           <e p="SearchingWordsList.cs" t="Include" />
           <e p="SelectPuzzleButton.cs" t="Include" />
+          <e p="WinPopup.cs" t="Include" />
           <e p="WordChecker.cs" t="Include" />
           <e p="WordsGrid.cs" t="Include" />
         </e>

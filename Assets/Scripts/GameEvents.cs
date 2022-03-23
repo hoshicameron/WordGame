@@ -56,4 +56,27 @@ public static class GameEvents
     {
         CorrectWordEvent?.Invoke(word,squareIndexes);
     }
+
+    public static event Action BoardCompletedEvent;
+
+    public static void CallBoardCompletedEvent()
+    {
+        BoardCompletedEvent?.Invoke();
+    }
+
+    //************************************************************
+    public static event Action UnlockNextCategoryEvent;
+
+    public static void CallUnlockNextCategoryEvent()
+    {
+        UnlockNextCategoryEvent?.Invoke();
+    }
+
+    //************************************************************
+    public static event Action LoadNextLevel;
+
+    public static void CallLoadNextLevel()
+    {
+        LoadNextLevel?.Invoke();
+    }
 }

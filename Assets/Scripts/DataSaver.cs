@@ -22,6 +22,7 @@ public class DataSaver : MonoBehaviour
 
     public static void ClearGameData(GameLevelData levelData)
     {
+        print("Clear");
         foreach (var record in levelData.data)
         {
             PlayerPrefs.SetInt(record.categoryName,-1);

@@ -22,7 +22,10 @@ public class SelectPuzzleButton : MonoBehaviour
         button = GetComponent<Button>();
         button.onClick.AddListener(OnButtonClick);
         UpdateButtonInformation();
-        button.interactable = !levelLocked;
+        if (levelLocked)
+            button.interactable = false;
+        else
+            button.interactable = true;
     }
 
     private void UpdateButtonInformation()
@@ -44,6 +47,8 @@ public class SelectPuzzleButton : MonoBehaviour
                 }
             }
         }
+
+        print($"{gameObject.name}: {currentIndex}");
 
         if (currentIndex == -1) levelLocked = true;
 
