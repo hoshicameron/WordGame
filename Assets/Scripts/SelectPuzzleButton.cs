@@ -48,8 +48,6 @@ public class SelectPuzzleButton : MonoBehaviour
             }
         }
 
-        print($"{gameObject.name}: {currentIndex}");
-
         if (currentIndex == -1) levelLocked = true;
 
         categoryText.SetText(levelLocked ? string.Empty : $"{currentIndex}/{totalBoards}");

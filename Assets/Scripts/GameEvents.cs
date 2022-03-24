@@ -79,4 +79,14 @@ public static class GameEvents
     {
         LoadNextLevel?.Invoke();
     }
+
+    //************************************************************
+
+    public static event Action GameOverEvent;
+
+    public static void CallGameOverEvent()
+    {
+        GameOverEvent?.Invoke();
+    }
+
 }

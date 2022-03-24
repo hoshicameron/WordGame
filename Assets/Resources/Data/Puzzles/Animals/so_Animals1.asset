@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
   m_Name: so_Animals1
   m_EditorClassIdentifier: 
-  timeInSeconds: 0
+  timeInSeconds: 60
   columns: 5
   rows: 5
   board:
