@@ -13,20 +13,28 @@ public class WinPopup : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEvents.BoardCompletedEvent+=OnBoardCompletedEvent;
+        GameEvents.BoardCompletedEvent+=ShowWinPopup;
+        AdManager.OnInterstitialAdsClosed+=InterstitialAdsCompleted;
     }
-
     private void OnDisable()
     {
-        GameEvents.BoardCompletedEvent-=OnBoardCompletedEvent;
+        GameEvents.BoardCompletedEvent-=ShowWinPopup;
+        AdManager.OnInterstitialAdsClosed-=InterstitialAdsCompleted;
     }
-    private void OnBoardCompletedEvent()
+
+    private void InterstitialAdsCompleted()
     {
+        // Todo stop all sounds
+    }
+    private void ShowWinPopup()
+    {
+        AdManager.Instance.HideBanner();
         winPopup.SetActive(true);
     }
 
     public void LoadNextLevel()
     {
+        AdManager.Instance.ShowInterstitialAd();
         GameEvents.CallLoadNextLevel();
     }
 

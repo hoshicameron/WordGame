@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using GoogleMobileAds.Api;
@@ -17,6 +18,8 @@ public class AdManager : MonoBehaviour
 
     public static AdManager Instance { get; private set; }
 
+    public static Action OnInterstitialAdsClosed;
+
     private void Awake()
     {
         if (Instance == null)
@@ -34,6 +37,18 @@ public class AdManager : MonoBehaviour
         MobileAds.Initialize(initStatus => { });
         CreateBanner(CreateRequest());
         CreateInterstitialAD(CreateRequest());
+
+        interstitial.OnAdClosed+=InterstitialAdClosed;
+    }
+
+    private void OnDisable()
+    {
+        interstitial.OnAdClosed-=InterstitialAdClosed;
+    }
+
+    private void InterstitialAdClosed(object sender, EventArgs e)
+    {
+        OnInterstitialAdsClosed?.Invoke();
     }
 
     private AdRequest CreateRequest()

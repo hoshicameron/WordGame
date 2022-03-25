@@ -38,6 +38,10 @@ public class WordChecker : MonoBehaviour
         SceneManager.LoadScene("Scene_Game");
     }
 
+    private void Start()
+    {
+        AdManager.Instance.ShowBanner();
+    }
 
     private void Update()
     {

@@ -10,5 +10,14 @@ public class GameUtility : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void HideBannerAds()
+    {
+        AdManager.Instance.HideBanner();
+    }
 
 }

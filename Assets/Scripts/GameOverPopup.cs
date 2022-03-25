@@ -26,6 +26,7 @@ public class GameOverPopup : MonoBehaviour
     }
     private void OnGameOverEvent()
     {
+        AdManager.Instance.HideBanner();
         gameOverPopup.SetActive(true);
         continueGameAfterAdsButton.GetComponent<Button>().interactable = false;
     }
