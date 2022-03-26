@@ -24,6 +24,7 @@ public class WinPopup : MonoBehaviour
 
     private void InterstitialAdsCompleted()
     {
+
         // Todo stop all sounds
     }
     private void ShowWinPopup()

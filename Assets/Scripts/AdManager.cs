@@ -34,7 +34,20 @@ public class AdManager : MonoBehaviour
 
     private void Start()
     {
+        if (testDevice)
+        {
+            List<string> testDevices = new List<string>();
+            testDevices.Add(SystemInfo.deviceUniqueIdentifier);
+
+            RequestConfiguration requestConfiguration =
+                new RequestConfiguration.Builder()
+                    .SetTagForChildDirectedTreatment(TagForChildDirectedTreatment.Unspecified)
+                    .SetTestDeviceIds(testDevices).build();
+            MobileAds.SetRequestConfiguration(requestConfiguration);
+        }
+
         MobileAds.Initialize(initStatus => { });
+
         CreateBanner(CreateRequest());
         CreateInterstitialAD(CreateRequest());
 
@@ -53,27 +66,16 @@ public class AdManager : MonoBehaviour
 
     private AdRequest CreateRequest()
     {
-        AdRequest request;
-
-        if (testDevice)
-        {
-            List<string> testDevices=new List<string>();
-            testDevices.Add(SystemInfo.deviceUniqueIdentifier);
-
-            RequestConfiguration requestConfiguration =
-                new RequestConfiguration.Builder().SetTestDeviceIds(testDevices).build();
-            MobileAds.SetRequestConfiguration(requestConfiguration);
-
-            request = new AdRequest.Builder().Build();
-        }
-        else
-            request = new AdRequest.Builder().Build();
+        var request = new AdRequest.Builder().Build();
 
         return request;
     }
 
     public void CreateInterstitialAD(AdRequest adRequest)
     {
+        if(interstitial!=null)
+            interstitial.Destroy();
+
         interstitial=new InterstitialAd(adInterstitialId);
         interstitial.LoadAd(adRequest);
     }
@@ -81,15 +83,18 @@ public class AdManager : MonoBehaviour
     public void ShowInterstitialAd()
     {
         // if add is available
-        if(interstitial.IsLoaded())
+        /*if(interstitial.IsLoaded() && interstitial!=null)
             interstitial.Show();
 
         // if not available
-        interstitial.LoadAd(CreateRequest());
+        interstitial.LoadAd(CreateRequest());*/
     }
 
     public void CreateBanner(AdRequest request)
     {
+        if(bannerView != null)
+            bannerView.Destroy();
+
         bannerView=new BannerView(adBannerID,AdSize.SmartBanner,bannerPosition);
         bannerView.LoadAd(request);
         HideBanner();
@@ -103,5 +108,10 @@ public class AdManager : MonoBehaviour
     public void ShowBanner()
     {
         bannerView.Show();
+    }
+
+    private void OnApplicationPause(bool pauseStatus)
+    {
+        print("Application Paused");
     }
 }

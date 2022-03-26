@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
   m_Name: so_Food2
   m_EditorClassIdentifier: 
-  timeInSeconds: 60
+  timeInSeconds: 120
   columns: 10
   rows: 10
   board:
