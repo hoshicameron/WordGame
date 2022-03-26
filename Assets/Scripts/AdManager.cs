@@ -24,11 +24,11 @@ public class AdManager : MonoBehaviour
     {
         if (Instance == null)
         {
-            Instance=this as AdManager;
+            Instance=this;
             DontDestroyOnLoad(this);
         } else
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
     }
 
@@ -56,7 +56,8 @@ public class AdManager : MonoBehaviour
 
     private void OnDisable()
     {
-        interstitial.OnAdClosed-=InterstitialAdClosed;
+        if(interstitial!=null)
+            interstitial.OnAdClosed-=InterstitialAdClosed;
     }
 
     private void InterstitialAdClosed(object sender, EventArgs e)

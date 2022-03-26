@@ -46,6 +46,7 @@
           <e p="SearchingWord.cs" t="Include" />
           <e p="SearchingWordsList.cs" t="Include" />
           <e p="SelectPuzzleButton.cs" t="Include" />
+          <e p="SettingsScene.cs" t="Include" />
           <e p="UnlockLevelPopup.cs" t="Include" />
           <e p="WinPopup.cs" t="Include" />
           <e p="WordChecker.cs" t="Include" />
