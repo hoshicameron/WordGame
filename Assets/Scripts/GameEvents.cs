@@ -89,4 +89,14 @@ public static class GameEvents
         GameOverEvent?.Invoke();
     }
 
+    //************************************************************
+
+    public static event Action SoundFxEvent;
+
+    public static void CallSoundFxEvent()
+    {
+        SoundFxEvent?.Invoke();
+    }
+
+
 }

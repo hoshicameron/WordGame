@@ -20,4 +20,11 @@ public class GameUtility : MonoBehaviour
         AdManager.Instance.HideBanner();
     }
 
+    public void MuteToggleBackgroundMusic()
+    {
+        AudioManager.Instance.ToggleBackgroundMusic();
+    }
+
+
+
 }

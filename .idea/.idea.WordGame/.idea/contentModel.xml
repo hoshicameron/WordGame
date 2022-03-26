@@ -26,6 +26,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AdManager.cs" t="Include" />
+          <e p="AudioManager.cs" t="Include" />
           <e p="CountDownTimer.cs" t="Include" />
           <e p="DataSaver.cs" t="Include" />
           <e p="Editor" t="Include">
@@ -47,6 +48,7 @@
           <e p="SearchingWordsList.cs" t="Include" />
           <e p="SelectPuzzleButton.cs" t="Include" />
           <e p="SettingsScene.cs" t="Include" />
+          <e p="SoundToggleButton.cs" t="Include" />
           <e p="UnlockLevelPopup.cs" t="Include" />
           <e p="WinPopup.cs" t="Include" />
           <e p="WordChecker.cs" t="Include" />
