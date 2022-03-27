@@ -109,10 +109,11 @@ public class WordChecker : MonoBehaviour
     {
         foreach (var searchWord in currentGameData.selectedBoardData.searchWords)
         {
-            if (word==searchWord.word)
+            if (word==searchWord.word && searchWord.found==false)
             {
                 GameEvents.CallCorrectWordEvent(word,correctSquareList);
                 completedWords++;
+                searchWord.found = true;
                 word = string.Empty;
                 correctSquareList.Clear();
                 CheckBoardCompleted();

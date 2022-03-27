@@ -10,6 +10,8 @@ public class BoardData : ScriptableObject
     [System.Serializable]
     public class SearchingWord
     {
+        [HideInInspector]
+        public bool found = false;
         public string word ;
     }
 
