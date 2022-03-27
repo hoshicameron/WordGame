@@ -19,6 +19,7 @@ public class GridSquare : MonoBehaviour
 
     private int index = -1;
 
+
     public void SetIndex(int index)
     {
         this.index = index;
@@ -29,6 +30,9 @@ public class GridSquare : MonoBehaviour
         return index;
     }
 
+
+
+    private AudioSource audioSource;
 
     private void OnEnable()
     {
@@ -112,6 +116,9 @@ public class GridSquare : MonoBehaviour
 
         if (!selected && clicked)
         {
+            if(!AudioManager.Instance.IsSoundFxMuted())
+                audioSource.Play();
+
             selected = true;
             GameEvents.CallCheckSquareEvent(normalLetterData.letter,transform.position,index);
         }
@@ -120,6 +127,7 @@ public class GridSquare : MonoBehaviour
     private void Start()
     {
         displayedImage = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void SetSprite(AlphabetData.letterData normalLetterData,
