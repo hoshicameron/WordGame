@@ -103,12 +103,12 @@ public class AdManager : MonoBehaviour
 
     public void HideBanner()
     {
-        bannerView.Hide();
+        //bannerView.Hide();
     }
 
     public void ShowBanner()
     {
-        bannerView.Show();
+        //bannerView.Show();
     }
 
     private void OnApplicationPause(bool pauseStatus)

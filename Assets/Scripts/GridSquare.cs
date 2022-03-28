@@ -7,9 +7,9 @@ public class GridSquare : MonoBehaviour
 {
     public int SquareIndex { get; set; }
 
-    private AlphabetData.letterData normalLetterData;
-    private AlphabetData.letterData selectedLetterData;
-    private AlphabetData.letterData correctLetterData;
+    private AlphabetData.letterData normalLetterData;        // Normal square sprite
+    private AlphabetData.letterData selectedLetterData;      // Selected square sprite
+    private AlphabetData.letterData correctLetterData;       // Correct square sprite
 
     private SpriteRenderer displayedImage;
 
@@ -29,8 +29,6 @@ public class GridSquare : MonoBehaviour
     {
         return index;
     }
-
-
 
     private AudioSource audioSource;
 
@@ -60,6 +58,7 @@ public class GridSquare : MonoBehaviour
 
     private void OnDisableSquareSelectionEvent()
     {
+        // deselect square
         selected = false;
         clicked = false;
 
@@ -76,6 +75,7 @@ public class GridSquare : MonoBehaviour
 
     private void CorrectWord(string word, List<int> squareIndexes)
     {
+        // Square is selected and it's in correct word
         if (selected && squareIndexes.Contains(index))
         {
             correct = true;
@@ -130,6 +130,12 @@ public class GridSquare : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
+    /// <summary>
+    /// Set square sprite image
+    /// </summary>
+    /// <param name="normalLetterData"></param>
+    /// <param name="selectedLetterData"></param>
+    /// <param name="correctLetterData"></param>
     public void SetSprite(AlphabetData.letterData normalLetterData,
                           AlphabetData.letterData selectedLetterData,
                           AlphabetData.letterData correctLetterData)

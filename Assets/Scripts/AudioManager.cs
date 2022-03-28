@@ -13,6 +13,7 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
+        // Singleton Implementation
         if (Instance == null)
         {
             Instance = this;
@@ -31,6 +32,7 @@ public class AudioManager : MonoBehaviour
 
     public void ToggleBackgroundMusic()
     {
+
         muteBackgroundMusic = !muteBackgroundMusic;
 
         if (muteBackgroundMusic) audioSource.Stop();

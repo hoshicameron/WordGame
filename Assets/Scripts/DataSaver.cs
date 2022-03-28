@@ -5,6 +5,11 @@ using UnityEngine.Video;
 
 public class DataSaver : MonoBehaviour
 {
+    /// <summary>
+    /// Read current category index from player prefs with category name
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public static int ReadCategoryCurrentIndexValues(string name)
     {
         var value = -1;
@@ -14,12 +19,21 @@ public class DataSaver : MonoBehaviour
         return value;
     }
 
+    /// <summary>
+    /// Save current category index to player prefs
+    /// </summary>
+    /// <param name="categoryName"></param>
+    /// <param name="currentIndex"></param>
     public static void SaveCategoryData(string categoryName, int currentIndex)
     {
         PlayerPrefs.SetInt(categoryName,currentIndex);
         PlayerPrefs.Save();
     }
 
+    /// <summary>
+    /// Clear all saved category indexes from player prefs
+    /// </summary>
+    /// <param name="levelData"></param>
     public static void ClearGameData(GameLevelData levelData)
     {
         print("Clear");

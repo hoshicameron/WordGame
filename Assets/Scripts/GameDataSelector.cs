@@ -13,6 +13,9 @@ public class GameDataSelector : MonoBehaviour
         SelectSequentialBoardData();
     }
 
+    /// <summary>
+    /// Select board Data to play
+    /// </summary>
     private void SelectSequentialBoardData()
     {
         foreach (var record in levelData.data)
@@ -20,10 +23,13 @@ public class GameDataSelector : MonoBehaviour
             if (record.categoryName == currentGameData.selectedCategoryName)
             {
                 var boardIndex = DataSaver.ReadCategoryCurrentIndexValues(currentGameData.selectedCategoryName);
+                // if there is a level that player not complete it then ...
                 if (boardIndex < record.BoardDatas.Count)
                 {
                     currentGameData.selectedBoardData = record.BoardDatas[boardIndex];
-                } else
+                }
+                // load one of the board datas in current category
+                else
                 {
                     var randomIndex = Random.Range(0, record.BoardDatas.Count);
                     currentGameData.selectedBoardData = record.BoardDatas[randomIndex];

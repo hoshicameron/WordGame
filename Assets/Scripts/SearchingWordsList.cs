@@ -27,6 +27,7 @@ public class SearchingWordsList : MonoBehaviour
         SetWordsPosition();
     }
 
+
     private void SetWordsPosition()
     {
         var squareRect = words[0].GetComponent<RectTransform>();

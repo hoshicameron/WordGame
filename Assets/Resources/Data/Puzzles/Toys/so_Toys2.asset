@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
   m_Name: so_Toys2
   m_EditorClassIdentifier: 
-  timeInSeconds: 0
+  timeInSeconds: 120
   columns: 10
   rows: 10
   board:
@@ -137,8 +137,13 @@ MonoBehaviour:
     - V
     - O
   searchWords:
-  - word: AIRPLANE
-  - word: BICYCLE
-  - word: CAR
-  - word: DRUMS
-  - word: MARBLES
+  - found: 0
+    word: AIRPLANE
+  - found: 0
+    word: BICYCLE
+  - found: 0
+    word: CAR
+  - found: 0
+    word: DRUMS
+  - found: 0
+    word: MARBLES

@@ -65,8 +65,15 @@ public class WordChecker : MonoBehaviour
         word = string.Empty;
     }
 
+    /// <summary>
+    /// When player click on the square this function called by CheckSquareEvent
+    /// </summary>
+    /// <param name="letter"></param>
+    /// <param name="squarePosition"></param>
+    /// <param name="squareIndex"></param>
     private void SquareSelected(string letter, Vector3 squarePosition, int squareIndex)
     {
+        // No letter selected
         if (assignedPoints == 0)
         {
             rayStartPosition = squarePosition;
@@ -82,16 +89,16 @@ public class WordChecker : MonoBehaviour
             rayDiagonalRightUp=new Ray2D(new Vector2(squarePosition.x, squarePosition.y), new Vector2(1,1));
             rayDiagonalRightDown=new Ray2D(new Vector2(squarePosition.x, squarePosition.y), new Vector2(1,-1));
         }
-        else if (assignedPoints == 1)
+        else if (assignedPoints == 1)        //second letter selected
         {
             correctSquareList.Add(squareIndex);
             currentRay = selectRay(rayStartPosition, squarePosition);
             GameEvents.CallSelectSquareEvent(squarePosition);
             word += letter;
             CheckWord();
-        } else
+        } else                              // more than tow letter
         {
-            if (IsPointOnTheRay(currentRay, squarePosition))
+            if (IsPointOnTheRay(currentRay, squarePosition))    // if selected square in the direction of the ray
             {
                 correctSquareList.Add(squareIndex);
                 GameEvents.CallSelectSquareEvent(squarePosition);
@@ -109,11 +116,13 @@ public class WordChecker : MonoBehaviour
     {
         foreach (var searchWord in currentGameData.selectedBoardData.searchWords)
         {
+            // If selected letter create is equal to one of searching word and that word not already founded
             if (word==searchWord.word && searchWord.found==false)
             {
+                // Change square image  to correct one and set a line over founded word
                 GameEvents.CallCorrectWordEvent(word,correctSquareList);
                 completedWords++;
-                searchWord.found = true;
+                searchWord.found = true;    // set the founded word to be true
                 word = string.Empty;
                 correctSquareList.Clear();
                 CheckBoardCompleted();
@@ -179,7 +188,7 @@ public class WordChecker : MonoBehaviour
     {
         bool loadNextCategory = false;
 
-        if (currentGameData.selectedBoardData.searchWords.Count == completedWords)
+        if (currentGameData.selectedBoardData.searchWords.Count == completedWords)    // All words founded
         {
             // Save current level progress
             var categoryName = currentGameData.selectedCategoryName;
@@ -222,6 +231,7 @@ public class WordChecker : MonoBehaviour
                         currentBoardIndex = 0;
                         loadNextCategory = true;
 
+                        // Unlock first level of next category
                         if(nextBoardIndex<0)
                             DataSaver.SaveCategoryData(categoryName,currentBoardIndex);
 
@@ -231,11 +241,12 @@ public class WordChecker : MonoBehaviour
                     }
                 } else
                 {
+                    // Show win popup and stop timer
                     GameEvents.CallBoardCompletedEvent();
                 }
 
                 if (loadNextCategory)
-                    GameEvents.CallUnlockNextCategoryEvent();
+                    GameEvents.CallUnlockNextCategoryEvent();    // Show unlock next category popup
 
             }
         }

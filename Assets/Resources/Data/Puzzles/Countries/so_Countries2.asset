@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ff0c9989d4d52458726efd52fe867a, type: 3}
   m_Name: so_Countries2
   m_EditorClassIdentifier: 
-  timeInSeconds: 0
+  timeInSeconds: 120
   columns: 11
   rows: 11
   board:
@@ -160,9 +160,15 @@ MonoBehaviour:
     - Z
     - N
   searchWords:
-  - word: AFGHANISTAN
-  - word: TURKYIE
-  - word: CHINA
-  - word: KURDISTAN
-  - word: EGYPT
-  - word: SYRIA
+  - found: 0
+    word: AFGHANISTAN
+  - found: 0
+    word: TURKYIE
+  - found: 0
+    word: CHINA
+  - found: 0
+    word: KURDISTAN
+  - found: 0
+    word: EGYPT
+  - found: 0
+    word: SYRIA
